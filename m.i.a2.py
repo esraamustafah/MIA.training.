@@ -9,7 +9,7 @@ print ("just trying " , secret)
 root = tk.Tk()
 root.title("Wordle Game")
 root.geometry("450x700")
-root.resizable(False,False)
+root.resizable(False,False);'''''''
 #preparing the game grid
 rows , cols =  6,5
 labels = [[None for _ in range (cols)] for _ in range (rows)]
