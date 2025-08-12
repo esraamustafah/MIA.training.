@@ -75,7 +75,7 @@ def update_keyboard(guess):
             if current_bg not in (colors["green"], colors["yellow"]):
                 btn.config(bg=colors["gray"], fg="white")
 
-# ===== التحقق من الكلمة =====
+# fuction for detecting
 def check_word():
     global current_row
     guess = entry.get().lower()
@@ -108,14 +108,14 @@ def check_word():
             return
     entry.delete(0, tk.END)
 
-# ===== أزرار GUESS =====
+# GUESS button
 btn = tk.Button(root, text="GUESS?", font=("helvetica", 14), command=check_word)
 btn.grid(row=rows, column=3, columnspan=2)
 
 status = tk.Label(root, text="", font=("Helvetica", 12))
 status.grid(row=rows+1, column=0, columnspan=5)
 
-# ===== الكيبورد =====
+# keyboard
 keyboard_rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"]
 
 def press_letter(ch):
